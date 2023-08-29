@@ -23,6 +23,7 @@ const HeroSection = () => {
               handleClick = {handleScroll}
             />
 
+            </div>
             <div className = "hero__image-container">
               <div className = "hero__image">
                 <Image
@@ -32,11 +33,9 @@ const HeroSection = () => {
                   className = "object-contain select-none"
                   draggable = {false}
                 />
-                <div className = "hero__image-overlay select-none" draggable = {false}/>
               </div>
+              <div className = "hero__image-overlay select-none" draggable = {false}/>
             </div>
-
-        </div>
     </div>
   )
 }

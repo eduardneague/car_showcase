@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
         </div>
 
-        <div className = "flex justify-between items-center flex-wrap border-t border-gray-100 sm:px-16 px-6 py-10">
+        <div className = "hidden md:flex justify-between items-center flex-wrap border-t border-gray-100 sm:px-16 px-6 py-10">
           <p>@2023 Carhub. All Rights Reserved</p>
           <div className = "footer__copyrights-link">
             <Link href = "/" className = "text-gray-500">
