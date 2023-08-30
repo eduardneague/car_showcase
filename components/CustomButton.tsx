@@ -9,9 +9,11 @@ interface Props {
   containerStyles?: string;
   handleClick?: MouseEventHandler<HTMLButtonElement>;
   btnType?: "button" | "submit";
+  rightIcon?: string;
+  isDisabled?: boolean;
 }
 
-const CustomButton = ({title, containerStyles, handleClick, btnType}: Props) => {
+const CustomButton = ({title, containerStyles, handleClick, btnType, rightIcon, isDisabled}: Props) => {
   const [state, setState] = useState()
 
   return (
@@ -24,6 +26,18 @@ const CustomButton = ({title, containerStyles, handleClick, btnType}: Props) => 
       <span className = {`flex-1`}>
         {title}
       </span>
+
+      {rightIcon &&
+        <div className = "relative w-6 h-6">
+          <Image
+            src = {rightIcon}
+            alt = {rightIcon}
+            fill
+            className = "object-contain select-none"
+            draggable = {false}
+          />
+        </div>
+      }
     </button>
   )
 }

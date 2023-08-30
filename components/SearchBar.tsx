@@ -7,7 +7,7 @@ const SearchBar = () => {
   const [manufacturer, setManufacturer] = useState<string>('')
 
   const handleSearch = () => {
-
+    
   }
 
   return (
