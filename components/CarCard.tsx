@@ -2,7 +2,7 @@
 
 import {useState} from 'react'
 import Image from 'next/image'
-import { calculateCarRent } from '@/utils';
+import { calculateCarRent, generateCarImageUrl } from '@/utils';
 import CustomButton from './CustomButton';
 import CarDetails from './CarDetails';
 import { CarType } from '@/utils/types';
@@ -28,7 +28,7 @@ const CarCard = ({ car }: CarCardProps) => {
     return (
         <div className = "car-card group">
             <div className = "car-card__content">
-                <h2 className = "car-card__content-title">
+                <h2 className = "capitalize font-extrabold text-xl">
                     {make} {model}
                 </h2>
             </div>
@@ -45,7 +45,7 @@ const CarCard = ({ car }: CarCardProps) => {
 
             <div className = "relative w-full h-40 my-3 object-contain">
                 <Image
-                    src = "/hero.png"
+                    src = {generateCarImageUrl(car)}
                     alt = "cacat"
                     fill
                     priority

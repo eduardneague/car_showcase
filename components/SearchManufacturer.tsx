@@ -54,7 +54,7 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: Props) => {
                         leaveTo = "opacity-0"
                         afterLeave = {() => setQuery('')}
                     >
-                        <Combobox.Options>
+                        <Combobox.Options className = "absolute w-full z-[10] h-[25rem] bg-white shadow-lg overflow-y-scroll">
                             {filteredManufacturers.map((item) => {
                                     return (
                                         <Combobox.Option
@@ -71,7 +71,7 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: Props) => {
                                                     active ? 'bg-primary-blue text-white' : 'bg-white text-black'
                                                     }`}
                                                 >
-                                                    {selected && <div>thing</div>}
+                                                    {selected && <div></div>}
                                                     {item}
                                                 </li>
                                                 )}

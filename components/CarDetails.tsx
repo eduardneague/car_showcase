@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { CarType } from "@/utils/types";
+import { generateCarImageUrl } from '@/utils';
 
 interface Props {
     isOpen: boolean;
@@ -60,13 +61,13 @@ const CarDetails = ({isOpen, closeModal, car}: Props) => {
                                 </button>
 
                                 <div className = "flex-1 flex flex-col gap-3">
-                                    <div className = "relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
+                                    <div className = "relative w-full h-40 bg-primary-blue-100 bg-cover bg-center rounded-lg">
                                         <Image
-                                            src = "/hero.png"
+                                            src = {generateCarImageUrl(car)}
                                             alt = "cacat"
                                             fill
                                             priority
-                                            className = "object-contain select-none"
+                                            className = "object-contain select-none mt-3"
                                             draggable = {false}
                                         />
                                     </div>
@@ -74,31 +75,31 @@ const CarDetails = ({isOpen, closeModal, car}: Props) => {
                                     <div className = "flex gap-3">
                                         <div className = "flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                                             <Image
-                                                src = "/hero.png"
+                                                src = {generateCarImageUrl(car, '29')}
                                                 alt = "cacat"
                                                 fill
                                                 priority
-                                                className = "object-contain select-none"
+                                                className = "object-contain select-none mt-1"
                                                 draggable = {false}
                                             />
                                         </div>
                                         <div className = "flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                                             <Image
-                                                src = "/hero.png"
+                                                src = {generateCarImageUrl(car, '33')}
                                                 alt = "cacat"
                                                 fill
                                                 priority
-                                                className = "object-contain select-none"
+                                                className = "object-contain flex select-none mt-[1.4rem]"
                                                 draggable = {false}
                                             />
                                         </div>
                                         <div className = "flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                                             <Image
-                                                src = "/hero.png"
+                                                src = {generateCarImageUrl(car, '13')}
                                                 alt = "cacat"
                                                 fill
                                                 priority
-                                                className = "object-contain select-none"
+                                                className = "object-contain select-none mt-1"
                                                 draggable = {false}
                                             />
                                         </div>
