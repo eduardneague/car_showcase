@@ -9,7 +9,7 @@ interface Props {
     manufacturer: string;
     setManufacturer: (manufacturer: string) => void;
 }
-
+// d
 const SearchManufacturer = ({ manufacturer, setManufacturer }: Props) => {
     const [query, setQuery] = useState('')
     const filteredManufacturers = query === '' 
