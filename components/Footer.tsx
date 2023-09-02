@@ -8,7 +8,7 @@ const Footer = () => {
       <div className = "flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6 py-10">
         <div className = "flex flex-col justify-start items-start gap-6">
           <Image
-            src = "/logo.svg"
+            src = "/logo.svg.png"
             alt = "logo"
             width = {118}
             height = {18}
@@ -16,7 +16,7 @@ const Footer = () => {
             draggable = {false}
           />
           <p className = "text-base text-gray-700">
-            Carhub 2023 <br/> All rights reserved &copy;
+            Showcar 2023 <br/> All rights reserved &copy;
           </p>
         </div>
 
@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
 
         <div className = "hidden md:flex justify-between items-center flex-wrap border-t border-gray-100 sm:px-16 px-6 py-10">
-          <p>@2023 Carhub. All Rights Reserved</p>
+          <p>@2023 Showcar. All Rights Reserved</p>
           <div className = "footer__copyrights-link">
             <Link href = "/" className = "text-gray-500">
               Privacy Policy

@@ -6,6 +6,7 @@ import { calculateCarRent, generateCarImageUrl } from '@/utils';
 import CustomButton from './CustomButton';
 import CarDetails from './CarDetails';
 import { CarType } from '@/utils/types';
+import { motion } from 'framer-motion'
 
 interface CarCardProps {
     car: CarType
@@ -26,7 +27,11 @@ const CarCard = ({ car }: CarCardProps) => {
     const carRent = calculateCarRent(city_mpg, year)
   
     return (
-        <div className = "car-card group">
+        <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className = "car-card group">
             <div className = "car-card__content">
                 <h2 className = "capitalize font-extrabold text-xl">
                     {make} {model}
@@ -118,7 +123,7 @@ const CarCard = ({ car }: CarCardProps) => {
                 car = {car}
             />
 
-        </div>
+        </motion.div>
     )
 }
 

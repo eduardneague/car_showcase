@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import CustomButton from './CustomButton'
+import { motion } from 'framer-motion'
 
 const HeroSection = () => {
   const handleScroll = () => {
@@ -9,9 +10,18 @@ const HeroSection = () => {
   }
 
   return (
-    <div className = "hero">
-        <div className = "flex-1 pt-36 padding-x">
-            <h1 className = "hero__title leading-[5.5rem]">Book, find or rent a car<br/> faster than ever before!</h1>
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className = "hero">
+        <motion.div 
+          initial={{ x: -300, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className = "flex-1 pt-36 padding-x mt-[5.5rem]"
+        >
+            <h1 className = "hero__title leading-[5.5rem]">Effortlessly discover your dream car.</h1>
 
             <p className = "hero__subtitle">
                 Streamline your car rental expeirence with our effortless booking process
@@ -23,9 +33,14 @@ const HeroSection = () => {
               handleClick = {handleScroll}
             />
 
-            </div>
-            <div className = "hero__image-container">
-              <div className = "hero__image">
+            </motion.div>
+            <div 
+              className = "hero__image-container">
+              <motion.div 
+                  initial={{ x: 300, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                  className = "hero__image">
                 <Image
                   src= "/hero.png"
                   alt = "hero"
@@ -33,10 +48,10 @@ const HeroSection = () => {
                   className = "object-contain select-none"
                   draggable = {false}
                 />
-              </div>
+              </motion.div>
               <div className = "hero__image-overlay select-none" draggable = {false}/>
             </div>
-    </div>
+    </motion.div>
   )
 }
 
