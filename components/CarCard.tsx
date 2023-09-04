@@ -25,7 +25,7 @@ const CarCard = ({ car }: CarCardProps) => {
     } = car
 
     const carRent = calculateCarRent(city_mpg, year)
-  
+  //d
     return (
         <motion.div 
         initial={{ opacity: 0 }}
