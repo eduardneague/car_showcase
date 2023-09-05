@@ -5,7 +5,7 @@ import SearchBar from "@/components/SearchBar";
 import ShowMore from "@/components/ShowMore";
 import { fuels, yearsOfProduction } from "@/constants/constants";
 import { fetchCars } from "@/utils";
-
+// d
 export default async function Home( { searchParams }: any) {
   const allCars = await fetchCars({ 
     manufacturer: searchParams.manufacturer || '',

@@ -25,7 +25,7 @@ const CarCard = ({ car }: CarCardProps) => {
     } = car
 
     const carRent = calculateCarRent(city_mpg, year)
-  //d
+    //d
     return (
         <motion.div 
         initial={{ opacity: 0 }}
@@ -39,11 +39,11 @@ const CarCard = ({ car }: CarCardProps) => {
             </div>
 
             <p className = "flex mt-6 text-[32px] font-extrabold">
-                <span className = "self-start text-[14px] font-semibold ">
+                <span className = "self-start text-[14px] font-semibold">
                     $
                 </span>
                 {carRent}
-                <span className = "self-end text-[14px] font-medium ">
+                <span className = "self-end text-[14px] font-medium">
                     /day
                 </span>
             </p>
